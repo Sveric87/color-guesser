@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <title>Color Guesser - Medium</title>
+
+</head>
+<body>
+
+    <div class="head">
+        <h1>Color Guesser</h1>
+        <div class="nav">
+            <p class="nav-item">New Game:</p>
+            <a href="easy.htm" class="nav-item nav-link">Easy</a>
+            <a href="medium.htm" class="nav-item nav-link active">Medium</a>
+            <a href="hard.htm" class="nav-item nav-link">Hard</a>
+            <a href="levels.htm" class="nav-item nav-link">Levels</a>
+        </div>
+    </div>
+
+    <div class="display">
+        <p id="lives"></p><p id="display">rgb(200,200,200)</p><p id="level">Medium ( 6 cards )</p>
+    </div>
+
+    <div class="game" id="game">
+        <!-- Cards will be created here -->
+    </div>
+
+    <div id="splash" class="messageSplash">
+        <div class="message">
+            <h1 id="winlose">You win!!</h1>
+            <a href="" onclick="location.reload();">New Game</a>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        let level = false, lvl = 0;
+        startGame(6);  
+        let lives = 3; 
+        setLives(lives);
+    </script>
+
+</body>
+</html>
